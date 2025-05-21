@@ -17,7 +17,7 @@ const projects = [
     {
         img: libraryScreenshot,
         name: 'Library',
-        description: 'A simple project utilizing objects and object constructors to create and display a list of books. Books are stored as objects in an array which will then be used to display the data to the user.',
+        description: 'A simple project utilizing objects and object constructors to create and display a list of books.',
         githubLink: 'https://github.com/vins123sinned/Library',
         projectLink: 'https://vins123sinned.github.io/Library/',
     },
@@ -52,7 +52,7 @@ const projects = [
 ];
 
 function createProjectCell(project) {
-    const main = document.querySelector('main');
+    const grid = document.querySelector('.projects-grid');
     const projectCell = document.createElement('div');
     // screenshot could use resolution switching!
     const screenshot = document.createElement('img');
@@ -60,6 +60,7 @@ function createProjectCell(project) {
     const projectHeader = document.createElement('header');
 
     const projectName = document.createElement('h3');
+    const linksContainer = document.createElement('div');
     const githubLink = document.createElement('a');
     const projectLink = document.createElement('a');
     const githubIcon = document.createElement('img');
@@ -68,11 +69,13 @@ function createProjectCell(project) {
     
     projectCell.classList.add('project-cell');
     screenshot.classList.add('project-screenshot');
-    projectInformation.classList.add('project-information-container');
+    projectInformation.classList.add('project-information');
     projectHeader.classList.add('project-header');
     projectName.classList.add('project-name');
-    githubIcon.classList.add('project-icon');
-    shareIcon.classList.add('project-icon', 'material-symbols-outlined');
+    linksContainer.classList.add('project-links');
+    githubLink.classList.add('project-github-link');
+    githubIcon.classList.add('project-img-icon');
+    shareIcon.classList.add('project-span-icon', 'material-symbols-outlined');
     projectDescription.classList.add('project-description');
 
     screenshot.src = project.img;
@@ -91,10 +94,11 @@ function createProjectCell(project) {
 
     githubLink.appendChild(githubIcon);
     projectLink.appendChild(shareIcon);
+    linksContainer.appendChild(githubLink);
+    linksContainer.appendChild(projectLink);
 
     projectHeader.appendChild(projectName);
-    projectHeader.appendChild(githubLink);
-    projectHeader.appendChild(projectLink);
+    projectHeader.appendChild(linksContainer);
 
     projectInformation.appendChild(projectHeader);
     projectInformation.appendChild(projectDescription);
@@ -102,7 +106,7 @@ function createProjectCell(project) {
     projectCell.appendChild(screenshot);
     projectCell.appendChild(projectInformation);
 
-    main.appendChild(projectCell);
+    grid.appendChild(projectCell);
 }
 
 (function populateProjects() {
