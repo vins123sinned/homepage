@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'butlerBold';
+    src:
+        url('./assets/fonts/butler-free-bd-webfont.woff2') format('woff2'),
+        url('./assets/fonts/butler-free-bd-webfont.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'butlerLight';
+    src:
+        url('./assets/fonts/butler-free-lgt-webfont.woff2') format('woff2'),
+        url('./assets/fonts/butler-free-lgt-webfont.woff') format('woff');
+    font-style: normal;
+}
+
+:root {
+    --font-heading: 'butlerBold';
+    --font-subheading: 'butlerLight';
+    --main-background: #004643;
+}
