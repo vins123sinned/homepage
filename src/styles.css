@@ -180,6 +180,10 @@ footer h2 {
     padding-top: 2.5rem;
 }
 
+footer .social-icons {
+    margin-top: 1.75rem;
+}
+
 .footer-image img {
     max-width: 100%;
     display: block;
