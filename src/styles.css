@@ -163,7 +163,7 @@ main,
     color: #000;
 }
 
-/* footer */
+/* footer section */
 
 footer,
 footer p {
@@ -197,6 +197,7 @@ footer .social-icons {
 }
 
 @media (min-width: 650px) {
+    /* header section */
     .diagonal-background {
         height: 80vh;
         transform: skewY(-15deg);
@@ -244,5 +245,12 @@ footer .social-icons {
 
     header .social-icons {
         display: none;
+    }
+}
+
+@media (min-width: 760px) {
+    main {
+        margin: 1.5rem 5rem;
+        text-align: left;
     }
 }
