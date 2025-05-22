@@ -30,6 +30,12 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-family: var(--font-subheading);
+    font-size: 3rem;
+    margin: 2rem 0 1rem 0;
+}
+
 p {
     text-align: left;
     line-height: 1.5;
@@ -79,13 +85,6 @@ main,
     margin: 1.5rem;
 }
 
-.about-me h2,
-main h2 {
-    font-family: var(--font-subheading);
-    font-size: 3rem;
-    margin: 2rem 0 1rem 0;
-}
-
 .social-icons {
     display: flex;
     justify-content: center;
@@ -103,7 +102,7 @@ main h2 {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
-    margin-top: 1.5rem;
+    margin: 1.5rem 0 8rem 0;
 }
 
 .project-cell {
@@ -155,4 +154,33 @@ main h2 {
     font-size: calc(var(--project-icon-size) + 0.2rem);
     margin-top: 0.1rem;
     color: #000;
+}
+
+/* footer */
+
+footer,
+footer p {
+    color: #fff;
+}
+
+footer {
+    background-color: var(--main-background);
+}
+
+.contact-information {
+    margin: 1.5rem;
+}
+
+.contact-information div {
+    font-weight: 300;
+    margin-top: 2.5rem;
+}
+
+footer h2 {
+    padding-top: 2.5rem;
+}
+
+.footer-image img {
+    max-width: 100%;
+    display: block;
 }
