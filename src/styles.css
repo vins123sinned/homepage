@@ -96,7 +96,7 @@ main,
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 5rem;
+    margin: 2rem 0 5rem 0;
 }
 
 .social-icons img {
@@ -199,6 +199,7 @@ footer h2 {
 
 footer .social-icons {
     margin-top: 1.75rem;
+    margin-bottom: 3rem;
 }
 
 .footer-image img {
@@ -214,7 +215,50 @@ footer .social-icons {
         transform: skewY(-15deg);
     }
 
-    header {
+    .portrait .name {
+        text-wrap: nowrap;
+    }
+
+    /* footer section */
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem 2rem 0 2rem;
+    }
+
+    footer h2 {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .contact-information {
+        width: clamp(350px, 50%, 450px);
+        margin-bottom: 0;
+    }
+
+    .contacts p:first-child {
+        margin-bottom: 0.5rem;
+    }
+
+    .contacts .material-symbols-outlined {
+        display: block;
+    }
+
+    footer .social-icons {
+        justify-content: start;
+        margin-bottom: 3.5rem;
+    }
+
+    .footer-image img {
+        max-height: 31.25rem;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 1080px) {
+    .main-header {
         max-width: clamp(600px, 90vw, 1000px);
         margin: 0 auto;
     }
@@ -227,6 +271,7 @@ footer .social-icons {
         position: relative;
         left: -1.5rem;
         float: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         width: clamp(300px, 40vw, 500px);
         margin: 4rem 0 0 2rem;
         z-index: 10;
@@ -236,7 +281,6 @@ footer .social-icons {
         position: relative;
         top: 5rem;
         left: clamp(-8.5rem, -13vw, -4.5rem);
-        text-wrap: nowrap;
         margin: 0;
         z-index: 999;
     }
@@ -254,49 +298,80 @@ footer .social-icons {
         max-width: 100%;
     }
 
-    header .social-icons {
+    .main-header .social-icons {
         display: none;
-    }
-
-    /* footer section */
-
-    footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-        padding: 2rem;
-    }
-
-    footer h2 {
-        padding: 0;
-        margin-top: 0;
-    }
-
-    .contact-information {
-        width: clamp(350px, 50%, 450px);
-    }
-
-    .contacts p:first-child {
-        margin-bottom: 0.5rem;
-    }
-
-    .contacts .material-symbols-outlined {
-        display: block;
-    }
-
-    .social-icons {
-        justify-content: start;
-    }
-
-    .footer-image img {
-        max-height: 31.25rem;
     }
 }
 
 @media (min-width: 760px) {
+    .main-header {
+        margin: 0 5rem;
+    }
+
+    .portrait-image img {
+        margin: 3rem 0 0 -1rem;
+    }
+
+    .about-me {
+        width: 100%;
+    }
+
     main {
         margin: 1.5rem 5rem;
         text-align: left;
+    }
+}
+
+@media (min-width: 1080px) {
+    .main-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        margin: 5rem clamp(2rem, 5vw, 10rem);
+    }
+
+    .portrait {
+        margin: 0;
+    }
+
+    .portrait-image img {
+        object-fit: cover;
+        object-position: 20% top;
+        width: clamp(375px, 30vw, 1000px);
+        height: 35rem;
+        margin: 0;
+    }
+
+    .portrait .name {
+        bottom: 0;
+        left: 0.5rem;
+        margin: 0;
+    }
+
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        max-width: 800px;
+        padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+        margin: 0;
+    }
+
+    .main-header .social-icons {
+        justify-content: end;
+        margin-bottom: 2rem;
+        margin-right: 1.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1550px) {
+    .portrait .name {
+        left: clamp(0.7rem, 4vw, 7rem);
     }
 }
