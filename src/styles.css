@@ -187,6 +187,16 @@ footer h2 {
     padding-top: 2.5rem;
 }
 
+.contacts p {
+    display: flex;
+    align-items: center;
+}
+
+.contacts .material-symbols-outlined {
+    margin-right: 1rem;
+    display: none;
+}
+
 footer .social-icons {
     margin-top: 1.75rem;
 }
@@ -198,6 +208,7 @@ footer .social-icons {
 
 @media (min-width: 650px) {
     /* header section */
+
     .diagonal-background {
         height: 80vh;
         transform: skewY(-15deg);
@@ -245,6 +256,41 @@ footer .social-icons {
 
     header .social-icons {
         display: none;
+    }
+
+    /* footer section */
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 2rem;
+    }
+
+    footer h2 {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .contact-information {
+        width: clamp(350px, 50%, 450px);
+    }
+
+    .contacts p:first-child {
+        margin-bottom: 0.5rem;
+    }
+
+    .contacts .material-symbols-outlined {
+        display: block;
+    }
+
+    .social-icons {
+        justify-content: start;
+    }
+
+    .footer-image img {
+        max-height: 31.25rem;
     }
 }
 

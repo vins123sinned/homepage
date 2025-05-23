@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call,mail,open_in_new" />
 </head>
 <body>
     <div class="diagonal-background"></div>
@@ -55,8 +55,18 @@
             </div>
 
             <div class="contacts">
-                <p class="phone-number">555-555-5555</p>
-                <p class="email">vinsonhe2@gmail.com</p>
+                <p class="phone-number">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                        call
+                    </span>
+                    555-555-5555
+                </p>
+                <p class="email">
+                    <span class="material-symbols-outlined" aria-hidden="true">
+                        mail
+                    </span>
+                    vinsonhe2@gmail.com
+                </p>
             </div>
 
             <div class="social-icons">
@@ -71,7 +81,7 @@
                     ./assets/pictures/footer/footer-landscape.jpg 1x,
                     ./assets/pictures/footer/footer-landscape-2x.jpg 2x
                 "
-                media="(orientation: landscape)"
+                media="(min-width: 1000px)"
             >
             <img 
                 srcset="./assets/pictures/footer/footer-portrait-2x.jpg 2x"
