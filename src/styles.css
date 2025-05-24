@@ -197,6 +197,10 @@ footer h2 {
     display: none;
 }
 
+.material-symbols-outlined {
+    cursor: default;
+}
+
 footer .social-icons {
     margin-top: 1.75rem;
     margin-bottom: 3rem;
