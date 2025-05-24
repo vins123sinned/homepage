@@ -24,7 +24,7 @@ const projects = [
     {
         img: restaurantPageScreenshot,
         name: 'Restaurant Page',
-        description: 'A website rendered using only DOM manipulation. Each website section will be created using DOM elements and styled using CSS',
+        description: 'A website rendered using only DOM manipulation and styled using CSS.',
         githubLink: 'https://github.com/vins123sinned/restaurant-page',
         projectLink: 'https://vins123sinned.github.io/restaurant-page/',
     },

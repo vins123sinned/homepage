@@ -59,7 +59,7 @@ p {
 
     background-color: #004643;
     width: 100%;
-    height: 45vh;
+    height: clamp(20rem, 45vh, 35rem);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     transform: skewY(-25deg);
@@ -138,7 +138,7 @@ main,
 
 .project-name {
     font-family: var(--font-subheading);
-    font-size: clamp(1.5rem, 8vw, 2rem);
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -211,7 +211,7 @@ footer .social-icons {
     /* header section */
 
     .diagonal-background {
-        height: 80vh;
+        height: clamp(30rem, 50vh, 35rem);;
         transform: skewY(-15deg);
     }
 
@@ -219,11 +219,16 @@ footer .social-icons {
         text-wrap: nowrap;
     }
 
+    /* main section */
+
+    .project-name {
+        font-size: clamp(1.6rem, 3.5vw, 2rem);
+    }
+
     /* footer section */
 
     footer {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         text-align: left;
         padding: 2rem 2rem 0 2rem;
@@ -237,6 +242,7 @@ footer .social-icons {
     .contact-information {
         width: clamp(350px, 50%, 450px);
         margin-bottom: 0;
+        margin-left: 0;
     }
 
     .contacts p:first-child {
@@ -253,7 +259,7 @@ footer .social-icons {
     }
 
     .footer-image img {
-        max-height: 31.25rem;
+        max-height: 28rem;
     }
 }
 
@@ -301,6 +307,10 @@ footer .social-icons {
     .main-header .social-icons {
         display: none;
     }
+
+    .footer-image {
+        margin-left: auto;
+    }
 }
 
 @media (min-width: 760px) {
@@ -319,6 +329,10 @@ footer .social-icons {
     main {
         margin: 1.5rem 5rem;
         text-align: left;
+    }
+
+    footer {
+        padding: 2rem 5rem;
     }
 }
 
@@ -367,6 +381,28 @@ footer .social-icons {
 
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        padding: 2rem 5rem;
+    }
+}
+
+@media (min-width: 1330px) {
+    .contact-information {
+        width: 800px;
+    }
+
+    .footer-image {
+        width: 100%;
+    }
+
+    .footer-image img {
+        object-fit: cover;
+        object-position: 50% 20%;
+        border-radius: 15px;
+        width: 100%;
+        max-height: 29rem;
     }
 }
 
